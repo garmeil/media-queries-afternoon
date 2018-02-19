@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css?family=Kaushan+Script|Montserrat");
+.App {
+  text-align: center;
+  background: #2b2b2d;
+  transition: 1s;
+}
+.App-nav {
+  display: flex;
+  background-color: #222;
+  height: 103px;
+  padding: 25px 16px;
+  color: white;
+  justify-content: space-around;
+  line-height: 24px;
+}
+.App-nav h1 {
+  color: #fed136;
+  font-family: "Kaushan Script";
+  font-size: 28px;
+  line-height: 42px;
+}
+.Nav-Item:hover {
+  cursor: pointer;
+}
+.topnav {
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.topnav a {
+  color: white;
+  font-family: "Montserrat";
+  line-height: 21.6px;
+  font-size: 14.4px;
+  padding: 15px 14px;
+  letter-spacing: 1px;
+  text-align: left;
+  text-decoration: none;
+}
+ps {
+}
+a {
+  text-decoration: none;
+}
+.topnav .Icon {
+  display: none;
+  background: #fed136;
+  border-radius: 3px;
+  height: 38px;
+  width: 78px;
+  padding: 0px !important;
+}
+@media (min-width: 992px) {
+  .App-nav {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    -webkit-transition: padding-top 0.3s, padding-bottom 0.3s;
+    -moz-transition: padding-top 0.3s, padding-bottom 0.3s;
+    transition: padding-top 0.3s, padding-bottom 0.3s;
+    border: none;
+    background-color: transparent;
+  }
+}
+@media (max-width: 990px) {
+  .Nav-Link {
+    display: none;
+  }
+  .topnav .Icon {
+    display: flex;
+    padding: 0px;
+    justify-content: center;
+    align-items: center;
+    line-height: 12px;
+    font-size: 12px;
+  }
+  .App-nav {
+    height: 155px;
+    padding: 0;
+    line-height: 24px;
+    background: black;
+  }
+  .ps {
+    background: black;
+  }
+  .App-nav h1 {
+    font-size: 20px;
+  }
+  .topnav.responsive {
+    display: flex;
+    flex-direction: column-reverse;
+    transition: 1s;
+    animation-name: hamburger;
+  }
+  .topnav.responsive .Nav-Link {
+    display: flex;
+    flex-direction: column;
+  }
+  .topnav.responsive .Icon {
+    background: green;
+  }
+}
+@keyframes hamburger {
+  0% {
+    display: absolute;
+    top: 10;
+  }
+  100% {
+    top: -10;
+  }
+}
